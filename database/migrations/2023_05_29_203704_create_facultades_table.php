@@ -20,6 +20,7 @@ return new class extends Migration
             $table->primary('cod_facultad');
         });
     }
+    
 
     /**
      * Reverse the migrations.
