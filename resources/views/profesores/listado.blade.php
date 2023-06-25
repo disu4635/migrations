@@ -3,38 +3,37 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Programas</h1>
-
-
+    <h1>Profesores</h1>
 @stop
 
 @section('content')
-    <p>Listado de Programas</p>
+    <p>Listado de Profesores</p>
     <table class="table">
     <thead>
         <tr>
         <th scope="col">#</th>
         <th scope="col">Codigo</th>
         <th scope="col">Nombre</th>
+        <th scope="col">Catedra</th>
         <th scope="col">Opciones</th>
-        <!-- <th> <a href="/facultades/registrar" type="button" class="btn btn-success">Adicionar</a> </th> -->
+        <th> <a href="/profesores/registrar" type="button" class="btn btn-success">Adicionar</a> </th>
         </tr>
     </thead>
-    <!-- <tbody>
+    <tbody>
         @php $contador = 0 @endphp
-        @foreach ($facultades as $f)
+        @foreach ($profesores as $p)
         @php $contador += 1 @endphp
         <tr>
             <th scope="row">{{$contador}}</th>
-            <td>{{$f->cod_facultad}}</td>
-            <td>{{$f->nom_facultad}}</td>
+            <td>{{$p->cod_profesor}}</td>
+            <td>{{$p->nom_profesor}}</td>
+            <td>{{$p->cat_profesor}}</td>
             <td>
-                <a type="button" class="btn btn-primary">Editar</a>
-                <a  href="{{route('eliminar_facultad', $f->cod_facultad)}}" type="button" class="btn btn-danger">Eliminar</a>
+            <a  href="{{route('eliminar_profesor', $p->cod_profesor)}}" type="button" class="btn btn-danger">Eliminar</a>
             </td>
         </tr>
         @endforeach
-    </tbody> -->
+    </tbody>
     </table>
 
 
